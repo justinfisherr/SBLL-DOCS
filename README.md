@@ -2,17 +2,17 @@
 
 ## Before we start
 
-This document will serve as a guide on how to use/edit the [Space Beach Law Lab website](https://www.spacelawlab.com/) in future iterations of SBLL for developers or non-developers alike. This website follows the 2023 design guidelines that Justin 2.0 will provide. If you have any questions at all, feel free to email be at my personal email justinthedev@outlook.com.
+This document will serve as a guide on how to use/edit the [Space Beach Law Lab website](https://www.spacelawlab.com/) in future iterations of SBLL for developers or non-developers alike. This website follows the 2023 design guidelines that Justin 2.0 will provide. If you have any questions at all, feel free to email me at my email justinthedev@outlook.com.
 
 # Table of contents:
 
 - [Simple Edits](#simple-edits)
     - [Editor Page](#editor-page)
     - [Content Manager / Dynamic Content](#content-manager--dynamic-content)
-- [Complex Edits (For Web Devs/Designers)](#complex-edits-for-web-devsdesigners)
-    - [Countdown](#countdown)
+- [Complex Edits (For Web Devs/Designers)](#complex-edits-for-web-devs)
+    - [Countdown Timer Logic](#countdown-timer-logic) 
     - [Sponsor Form](#sponsor-form)
-    - [Dependencies / Agenda](#dependencies--agenda)
+    - [Dependencies / Agenda](#dependencies) 
 
 # Simple Edits
 
@@ -95,3 +95,22 @@ contactButton.addEventListener("click", () => {
   }, 500); // 2000 milliseconds delay (2 seconds)
 });
 </script>
+```
+
+- Here within the if statement you will see three parameters `emailjs.sendForm("service_nwperz6", "template_6529013", emailForm)`
+- The first two change to your emailjs variables.
+- After that, the form will now be hooked up to your account.
+
+## Dependencies
+
+There is one library that provided functionality to the website that webflow didn’t offer out the box — and that is finsweet: [https://finsweet.com/](https://finsweet.com/) 
+
+The dependency is added to the <head> of our page settings. Please be careful not to remove that if you intend on keeping this agenda format.
+
+I specifically used it for the Agenda section of the website to be able to display events based off of which date is selected. 
+
+![Untitled](Space%20Beach%20Law%20Lab%20Web%20Documentation%2038b9383bce05436992c1733e36abd6e7/Untitled%206.png)
+
+So if you want to add more dates or just have a general understanding of how it is working check 
+
+[https://finsweet.com/attributes/resources/cloneable-filter-ui-checkbox-radio](https://finsweet.com/attributes/resources/cloneable-filter-ui-checkbox-radio)
