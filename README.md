@@ -2,17 +2,17 @@
 
 ## Before we start
 
-This document will serve as a guide on how to use/edit the [https://www.spacelawlab.com/](https://www.spacelawlab.com/) website in future iterations of SBLL for developers or non-developers alike. This website follows the 2023 design guidelines that Justin 2.0 will provide. If you have any questions at all, feel free to email be at my personal email justinthedev@outlook.com.
+This document will serve as a guide on how to use/edit the [Space Beach Law Lab website](https://www.spacelawlab.com/) in future iterations of SBLL for developers or non-developers alike. This website follows the 2023 design guidelines that Justin 2.0 will provide. If you have any questions at all, feel free to email be at my personal email justinthedev@outlook.com.
 
 # Table of contents:
 
-- [Simple Edits](https://www.notion.so/Space-Beach-Law-Lab-Web-Documentation-38b9383bce05436992c1733e36abd6e7?pvs=21)
-    - [Editor Page](https://www.notion.so/Space-Beach-Law-Lab-Web-Documentation-38b9383bce05436992c1733e36abd6e7?pvs=21)
-    - [Content Manager / Dynamic Content](https://www.notion.so/Space-Beach-Law-Lab-Web-Documentation-38b9383bce05436992c1733e36abd6e7?pvs=21)
-- [Complex Edits (For Web Devs/Designers)](https://www.notion.so/Space-Beach-Law-Lab-Web-Documentation-38b9383bce05436992c1733e36abd6e7?pvs=21)
-    - [Countdown](https://www.notion.so/Space-Beach-Law-Lab-Web-Documentation-38b9383bce05436992c1733e36abd6e7?pvs=21)
-    - [Sponsor Form](https://www.notion.so/Space-Beach-Law-Lab-Web-Documentation-38b9383bce05436992c1733e36abd6e7?pvs=21)
-    - [Dependencies / Agenda](https://www.notion.so/Space-Beach-Law-Lab-Web-Documentation-38b9383bce05436992c1733e36abd6e7?pvs=21)
+- [Simple Edits](#simple-edits)
+    - [Editor Page](#editor-page)
+    - [Content Manager / Dynamic Content](#content-manager--dynamic-content)
+- [Complex Edits (For Web Devs/Designers)](#complex-edits-for-web-devsdesigners)
+    - [Countdown](#countdown)
+    - [Sponsor Form](#sponsor-form)
+    - [Dependencies / Agenda](#dependencies--agenda)
 
 # Simple Edits
 
@@ -32,7 +32,7 @@ The only thing you **cannot change** is CMS items. CMS items will have a purple 
 
 Also, If you want to change spacing or any design aspects — you must go into the designer — which I do not recommend for non-developers/designers.
 
-## Our Collections/ CMS
+## Content Manager / Dynamic Content
 
 Navigate to the *collections page.*
 
@@ -52,15 +52,7 @@ Once you are done, click create and a speaker will be *ready* to be added to the
 
 To actually add the speaker you must publish the website
 
-## Complex Collection
-
-Lets look at our most complicated collection, **Events.** 
-
-![Untitled](Space%20Beach%20Law%20Lab%20Web%20Documentation%2038b9383bce05436992c1733e36abd6e7/Untitled%204.png)
-
-**Events** have fields for the collection **Speakers** and **Moderator.** Upon clicking, you can pick from speakers who will be speaking at the event. They will then be displayed on the website.
-
-# Complex Changes for Web Devs
+# Complex Edits for Web Devs
 
 ## Countdown Timer Logic
 
@@ -103,22 +95,3 @@ contactButton.addEventListener("click", () => {
   }, 500); // 2000 milliseconds delay (2 seconds)
 });
 </script>
-```
-
-- Here within the if statement you will see three parameters `emailjs.sendForm("service_nwperz6", "template_6529013", emailForm)`
-- The first two change to your emailjs variables.
-- After that, the form will now be hooked up to your account.
-
-## Dependencies
-
-There is one library that provided functionality to the website that webflow didn’t offer out the box — and that is finsweet: [https://finsweet.com/](https://finsweet.com/) 
-
-The dependency is added to the <head> of our page settings. Please be careful not to remove that if you intend on keeping this agenda format.
-
-I specifically used it for the Agenda section of the website to be able to display events based off of which date is selected. 
-
-![Untitled](Space%20Beach%20Law%20Lab%20Web%20Documentation%2038b9383bce05436992c1733e36abd6e7/Untitled%206.png)
-
-So if you want to add more dates or just have a general understanding of how it is working check 
-
-[https://finsweet.com/attributes/resources/cloneable-filter-ui-checkbox-radio](https://finsweet.com/attributes/resources/cloneable-filter-ui-checkbox-radio)
